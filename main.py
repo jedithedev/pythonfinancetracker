@@ -13,6 +13,7 @@ fileinfo = {
 }
 
 try : 
-  file = open('finances.json', 'r')
+  file = saveinfo.fileopen('finances.json')
+  print(file)
 except FileNotFoundError:
   file = saveinfo.filesave(Info(fileinfo['income'], fileinfo['expenses']), 'finances.json')
