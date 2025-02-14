@@ -7,3 +7,4 @@ Here are the required libraries :
 ```
 pip install numpy
 ```
+Made by Elliott and Matthew
