@@ -1,11 +1,7 @@
 import saveinfo
 from saveinfo import Info
 
-file = open('finances.json', 'r')
-
-if len(file.read()) < 2:
-  print('empty file')
-
-
-saveinfo.save(['table'], ['table2'])
-
+try : 
+  file = open('finances.json', 'r')
+except FileNotFoundError:
+  file = saveinfo.filesave(Info(100, 50), 'finances.json')
