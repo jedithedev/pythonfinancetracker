@@ -5,6 +5,6 @@ Finance tracker in python, here are the functionalities :
 
 Here are the required libraries : 
 ```
-pip install numpy
+pip install numpy plotly
 ```
 Made by Elliott and Matthew
