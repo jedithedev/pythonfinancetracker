@@ -13,3 +13,9 @@ diagram = go.Figure(data=[
       source = [ ],
       target = [ ],
       value = [ ]))])
+
+fig.update_layout(
+  title = name + "'s finance tracker"
+  font = dict(size = 12 color = 'black')
+)
+fig.show()
