@@ -1,6 +1,8 @@
 import saveinfo
 import graph.py
 from saveinfo import Info
+from graph import json
+
 
 fileinfo = {
   'income' : {
