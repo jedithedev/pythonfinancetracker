@@ -1,4 +1,5 @@
 import saveinfo
+import graph.py
 from saveinfo import Info
 
 fileinfo = {
@@ -17,3 +18,5 @@ try :
   print(file)
 except FileNotFoundError:
   file = saveinfo.filesave(Info(fileinfo['income'], fileinfo['expenses']), 'finances.json')
+
+Info.user_input()
