@@ -5,7 +5,7 @@ class Info:
     self.income = income
     self.expenses = expenses
 
-  def input_data(self, inuput):
+  def input_data(self):
     
     print(What are your incomes?")
     income_input = input(str())
