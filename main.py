@@ -3,22 +3,24 @@ import graph.py
 from saveinfo import Info
 from graph import json
 
-
-fileinfo = {
-  'income' : {
-    'unemployed' : 25,
-    'selling grease' : 25
-  },
-  'expenses' : {
-    'rent (cardboard box)' : 5,
-    'mcdonalds' : 43
-  }
-}
-
 try : 
   file = saveinfo.fileopen('finances.json')
   print(file)
 except FileNotFoundError:
   file = saveinfo.filesave(Info(fileinfo['income'], fileinfo['expenses']), 'finances.json')
 
-Info.user_input()
+income_input = input(str())
+
+
+print("What are your incomes?")
+income_input = input(str())
+print(income_input)
+
+print("What are your expenses")
+expenses_input input(str())
+print(expenses_input)
+
+finances = {
+  'income' : income_input
+  'expenses' : expenses_input
+}
