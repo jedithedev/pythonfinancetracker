@@ -5,6 +5,16 @@ class Info:
     self.income = income
     self.expenses = expenses
 
+  def input_data(self, inuput):
+    
+    print(What are your incomes?")
+    income_input = input(str())
+    self.income = income_input
+  
+    print(What are your expenses?")
+    expenses_input = input(str())
+    self.expenses = expenses_input
+
 def filesave(s : Info, filename : str):
 
   with open(filename, 'w') as f:
