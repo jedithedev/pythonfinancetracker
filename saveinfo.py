@@ -1,17 +1,17 @@
 import json
 
 class Info:
-  def __init__(self, income, expenses):
-    self.income = income
-    self.expenses = expenses
+  def __init__(self):
+    self.income = None
+    self.expenses = None
 
   def input_data(self):
-    
-    print(What are your incomes?")
+
+    print("What are your incomes?")
     income_input = input(str())
     self.income = income_input
-  
-    print(What are your expenses?")
+
+    print("What are your expenses?")
     expenses_input = input(str())
     self.expenses = expenses_input
 
