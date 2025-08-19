@@ -1,34 +1,29 @@
+#Imports
 import json
 
+#Class for the self. variables (not really needed anymore but it would take a lot of work to change the code and remove the class)
 class Info:
   def __init__(self):
     self.income = None
     self.expenses = None
+    self.income_volume = 0
+    self.expenses_volume = 0
 
-  def input_data(self):
-
-    print("What are your incomes?")
-    income_input = input(str())
-    self.income = income_input
-
-    print("What are your expenses?")
-    expenses_input = input(str())
-    self.expenses = expenses_input
-
+#code used to save info into a .json file
 def filesave(s : Info, filename : str):
 
   with open(filename, 'w') as f:
-    json.dump({'income' : s.income, 'expenses' : s.expenses}, f, indent=2)
+    json.dump({'income' : s.income, 'expenses' : s.expenses, 'income_volume' : s.income_volume, 'expenses_volume' : s.expenses_volume}, f, indent=2)
 
+#code used to initialise the .json file
 def fileopenclass(filename):
   file = open(filename, 'r')
   f = json.load(file)
-  s = Info(f['income'], f['expenses'])
-
+  s = Info(f['income'], f['expenses'], f['income_volume'], f['expenses_volume'])
   return s
 
+#code used to open the .json file
 def fileopen(filename):
   file = open(filename, 'r')
   f = json.load(file)
-
   return f
